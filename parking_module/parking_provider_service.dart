@@ -1,4 +1,4 @@
-abstract class ParkingProviderAgent {
+abstract class ParkingProviderService {
   void getProviderName();
   void getGarage();
   void startParkingService();

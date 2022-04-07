@@ -1,6 +1,6 @@
-import 'parking_provider_agent.dart';
+import 'parking_provider_service.dart';
 
-class ShpvParkingProvider implements ParkingProviderAgent {
+class ShpvParkingProvider implements ParkingProviderService {
   @override
   void getGarage() {
     print('get parkbee garage');

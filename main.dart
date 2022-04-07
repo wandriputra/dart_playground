@@ -1,14 +1,17 @@
-import 'parkbee_parking_provider.dart';
-import 'parking_provider_agent.dart';
-import 'parking_provider_service.dart';
+import 'parking_module/parking_provider_service.dart';
+import 'parking_module/parking_provider_agent.dart';
 
 void main() {
-  ParkingProviderService parkingProviderService = ParkingProviderService();
+  ParkingProviderAgent parkingProviderAgent = ParkingProviderAgent();
 
-  String parkingGarageId = '01-parkbee-01';
+  String parkingGarageId = '01-shvp-01';
 
-  ParkingProviderAgent delegate =
-      parkingProviderService.getProviderByGarage(parkingGarageId);
+  try {
+    ParkingProviderService delegate =
+        parkingProviderAgent.getProviderByGarage(garageName: parkingGarageId);
 
-  delegate.startParkingService();
+    delegate.startParkingService();
+  } catch (e) {
+    print(e);
+  }
 }
